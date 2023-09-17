@@ -56,5 +56,5 @@ class BookCLI(SimpleCLI):
         
     def run(self):
         print("Welcome to the Book CLI!")
-        print("Available commands: create, read, update, delete, quit")
+        print("Available commands: create, read, update, delete, quit ")
         super().run()
