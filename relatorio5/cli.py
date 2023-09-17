@@ -27,14 +27,14 @@ class BookCLI(SimpleCLI):
 
 
     def create_book(self):
-        titulo = input("Enter the titulo: ")
-        autor = input("Enter the autor: ")
-        ano = int(input("Enter the ano: "))
-        preco = float(input("Enter the preço: "))
+        titulo = input("Digite o titulo: ")
+        autor = input("Digite o autor: ")
+        ano = int(input("Digite o ano: "))
+        preco = float(input("Digite o preço: "))
         self.book_model.create_book(titulo, autor, ano, preco)
 
     def read_book(self):
-        id = input("Enter the id: ")
+        id = input("Digite o id: ")
         book = self.book_model.read_book_by_id(id)
         if book:
             print(f"titulo: {book['titulo']}")
@@ -43,15 +43,15 @@ class BookCLI(SimpleCLI):
             print(f"preço: {book['preco']}")
 
     def update_book(self):
-        id = input("Enter the id: ")
-        titulo = input("Enter the new titulo: ")
-        autor = input("Enter the new autor: ")
-        ano = int(input("Enter the new ano: "))
-        preco = float(input("Enter the new preço: "))
+        id = input("Digite o id: ")
+        titulo = input("Digite o novo titulo: ")
+        autor = input("Digite o novo autor: ")
+        ano = int(input("Digite o novo ano: "))
+        preco = float(input("Digite o novo preço: "))
         self.book_model.update_book(id, titulo, autor, ano, preco)
 
     def delete_book(self):
-        id = input("Enter the id: ")
+        id = input("Digite o id: ")
         self.book_model.delete_book(id)
         
     def run(self):
